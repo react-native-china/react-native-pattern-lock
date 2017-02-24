@@ -1,0 +1,26 @@
+{
+  "name": "react-native-pattern-lock",
+  "version": "0.0.1",
+  "description": " Pattern lock component for react-native.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-native-china/react-native-pattern-lock.git"
+  },
+  "keywords": [
+    "react-native",
+    "unlock",
+    "lock",
+    "pattern-lock",
+    "nine-point"
+  ],
+  "author": "oboo chin <cheng.12@live.cn> (github.com/obooman)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-native-china/react-native-pattern-lock/issues"
+  },
+  "homepage": "https://github.com/react-native-china/react-native-pattern-lock#readme"
+}
