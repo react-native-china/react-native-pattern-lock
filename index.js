@@ -1,1 +1,2 @@
-export { default as RNPatternLock } from './Main'
+import RNPatternLock from  './main';
+export default RNPatternLock;

@@ -70,6 +70,7 @@ export default class GestureAware extends Component{
 	_moveHandler = (e, gestureState) => {
 		this.onMove({
 			...gestureState,
+			moveX:gestureState.moveX - this.state.position.left,
 			moveY:gestureState.moveY - this.state.position.top
 		})
 	}
@@ -77,7 +78,7 @@ export default class GestureAware extends Component{
 	_endHandler = (e, gestureState) => {
 
 		this.onEnd({
-			moveX:gestureState.moveX,
+			moveX:gestureState.moveX - this.state.position.left,
 			moveY:gestureState.moveY - this.state.position.top
 		})
 	}
