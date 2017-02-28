@@ -17,4 +17,8 @@ export default class MainScreen extends Components{
 			</View>
 		)
 	}
+
+	onStart(){
+		
+	}
 }

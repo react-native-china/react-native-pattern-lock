@@ -6,8 +6,15 @@ import {
 
 export default class Dot extends Component{
 	componentDidMount(){
-		this.refs.dot.measure(() => {
-			
+		setTimeout(() => {
+			this.getLayout((x, y, w, h, pageX, pageY) => {
+				this.setState({
+					position:{
+						left:pageX,
+						top:pageY
+					}
+				})
+			});
 		})
 	}
 
@@ -23,7 +30,7 @@ export default class Dot extends Component{
 				borderRadius:10,
 				borderWidth:1,
 				borderColor:'grey'
-			}} { ...this.props.style } ref="dot"></View>
+			}} { ...this.props.style }></View>
 		)
 	}
 }
