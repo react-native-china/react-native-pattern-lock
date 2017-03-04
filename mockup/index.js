@@ -12,7 +12,7 @@ export default class MainScreen extends Components{
 				<RNPatternLock
 					onStart = { this.onStart }
 					onEnd = { this.onEnd }
-					status = 'setting/lock'
+					type = 'lock'// oneOf["lock","set","confirm"]
 				/>
 			</View>
 		)
@@ -21,4 +21,14 @@ export default class MainScreen extends Components{
 	onStart(){
 		
 	}
+
+	onEnd(ev){
+		// ev.token
+		if( ev.token == '12394' ){
+			// successHandler()
+		} else {
+			RNPatternLock.setError();
+		}
+	}
 }
+
