@@ -1,36 +1,32 @@
 import React,{ Component } from 'react';
 import {
 	View,
-	Text
+	Text,
+	ART
 } from 'react-native'
+
+const {
+	Shape,
+	Path
+} = ART;
 
 export default class Dot extends Component{
 	componentDidMount(){
-		setTimeout(() => {
-			this.getLayout((x, y, w, h, pageX, pageY) => {
-				this.setState({
-					position:{
-						left:pageX,
-						top:pageY
-					}
-				})
-			});
-		})
 	}
 
 	render(){
+
+		let {
+			x,y
+		} = this.props;
+
+		x = x || 10;
+		y = y || 10;
+
 		return(
-			<View style={{ 
-				width:10,
-				height:10,
-				backgroundColor:'grey',
-				position:'absolute',
-				left:100,
-				top:100,
-				borderRadius:10,
-				borderWidth:1,
-				borderColor:'grey'
-			}} { ...this.props.style }></View>
+			<Shape d={ 
+				new Path().moveTo(x,y).arcTo(x+10,y+10,5,5).arcTo(x,y,5,5)
+			} fill = "green"/>
 		)
 	}
 }

@@ -34,6 +34,17 @@ export default class RNPatternLock extends Component{
 					>
 					<Surface width="320" height="320" style={{ backgroundColor:'#021903' }}>
 						<Shape d={ this.getLine() } stroke="#ad902a"></Shape>
+						<Dot x={100} y={100}/>
+						<Dot x={100} y={160}/>
+						<Dot x={100} y={220}/>
+
+						<Dot x={160} y={100}/>
+						<Dot x={160} y={160}/>
+						<Dot x={160} y={220}/>
+
+						<Dot x={220} y={100}/>
+						<Dot x={220} y={160}/>
+						<Dot x={220} y={220}/>
 					</Surface>
 					
 					{ this.getDots() }
